@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
+/********************** MAIN STYLES  ***************************/
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Helvetica;
+}
+.expenseTracker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+/********************** Header & Profile  ***************************/
+header > .profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+header > .appName {
+    color: navy;
+    font-family: "Protest Strike", sans-serif;
+    letter-spacing: .1rem;;
+}
+.profile > .date {
+    display: flex;
+    justify-content: space-between;
+}
+.profile > .user {
+    display: flex;
+    justify-content: space-between;
+}
+.user > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid navy;
+    margin-right: .5rem;
+}
+.date > p {
+    padding: .2rem;
+    font-size:.8rem;
+    font-weight: bold;
+}
+
+/********************** Balance, Income & Expenses Section  ***************************/
+
+.mainExpense > .balance {
+    text-align: center;
+}
+
+.mainExpense > .balanceSheet {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    margin: .5rem;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    text-align: center;
+}
+.balance > #balanceTotal {
+    color: navy;
+}
+.mainExpense > .balanceSheet > .income,
+.mainExpense > .balanceSheet > .expense {
+    flex: 1;
+    position: relative;
+}
+.mainExpense > .balanceSheet > .income {
+    border-bottom: 3px solid green;
+    transition: 0.2s ease-in-out;
+}
+.income > .balanceAmount {
+    color: lightgreen;
+}
+.expense > .balanceAmount {
+    color: lightcoral;
+}
+.mainExpense > .balanceSheet > .expense {
+    border-bottom: 3px solid red;
+    transition: all 0.2s ease-in-out;
+}
+.mainExpense > .balanceSheet >.income:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: #ccc;
+}
+
+/********************** Transaction Entry Section  ***************************/
+
+.transactionHead > #transactionName {
+    width: 45%;
+}
+.transactionHead > #transactionAmount {
+    width: 25%;
+}
+.addTransaction {
+    border-radius: 50%;
+    border: none;
+    width: 25px;
+    height: 25px;
+    background: navy;
+    font-size: 1.2rem;
+    color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.addTransaction:hover {
+    transform: scale(1.05);
+}
+.addTransaction:active {
+    transform: scale(0.95);
+    background: #ccc;
+}
+
+/********************** Transaction History Section  ***************************/
+
+.historyList {
+    left:0;
+    padding: 0;
+    margin: 0;
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+ul.historyList > li.transaction:first-child > .transactionName,
+ul.historyList > li.transaction:first-child > .transactionValue,
+ul.historyList > li.transaction:first-child > .transactionType > .transactionTypeType {
+    color: black;
+    font-weight: bold;
+    
+}
+ul.historyList > li.transaction:first-child > .transactionType > .transactionTypeTime {
+    font-size: .8rem;
+    padding: 0;
+    font-weight: bold;
+    color: black;
+}
+.transaction {
+    display: flex;
+    justify-content: space-around;
+}
+.transaction > p {
+    margin-right:.25rem;
+    font-size: .9rem;
+}
+.transaction > .transactionName {
+    width: 50%;
+    font-weight: bold;
+    color: navy;
+}
+.transaction > .transactionValue {
+    width: 20%;
+}
+.transaction > .transactionType {
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+}
+.transactionType > p {
+    font-size: .8rem;
+}
+.transactionType >.transactionTypeTime {
+    font-size: .6rem;
+    padding:.35rem;
+    color: darkslategray;
+}
+.user > .username {
+    cursor: pointer;
+}
+
+/********************** FOOTER  ***************************/
+footer {
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    color:white;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(1, 1, 1, 0.2);
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+}

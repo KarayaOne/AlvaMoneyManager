@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Alva Expense Tracker</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+
+        <!-- Expense Tracker App -->
+        <div class="expenseTracker">
+            <!-- Header -->
+            <header>
+                <h1 class="appName">Alva Budget Manager</h1>
+
+                <div class="profile">
+                    <div class="user">
+                        <img src="/images/user.png" alt="user" class="userImage">
+                        <h4 class="username" id="username">User</h4>
+                    </div>
+                    <div class="date">
+                        <p id="day">Day</p>
+                        <p id="month">Month</p>
+                        <p id="time">Time</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Tracker -->
+            <div class="mainExpense">
+
+                <div class="balance">
+                    <h2>Balance</h2>
+                    <h1 id="balanceTotal">$0</h1>
+                </div>
+
+                <div class="balanceSheet">
+                    <div class="income">
+                        <h4 class="balanceHeading">Income</h4>
+                        <h4 class="balanceAmount" id="balanceIncome">$0</h4>
+                    </div>
+                    <div class="expense">
+                        <h4 class="balanceHeading">Expense</h4>
+                        <h4 class="balanceAmount" id="balanceExpense">$0</h4>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Transactions Section -->
+            <div class="transactionSection">
+
+                <div class="transactionHead">
+                    <br><hr>
+                    <h3>Add Transactions</h3>
+                    <input type="text" name="transactionName" placeholder="Enter Transaction Name" id="transactionName" required>
+                    <input type="number" name="transactionValue" placeholder="Enter amount" id="transactionAmount" required>
+                    <select name="transactionFilter" id="transactionType">
+                        <option value="type" selected>Type</option>
+                        <option value="credit">Credit</option>
+                        <option value="debit">Debit</option>
+                    </select>
+                    <button class="addTransaction" id="addTransaction">+</button>
+                </div>
+                <br><hr>
+                <!-- Transaction History Section -->
+                <h3>Transaction History</h3>
+                <ul class="historyList">
+                    <li class="transaction">
+                        <p class="transactionNumber">#</p>
+                        <p class="transactionName">Transaction Name</p>
+                        <p class="transactionValue">Amount</p>
+                        <div class="transactionType">
+                            <p class="transactionTypeType">Type</p>
+                            <p class="transactionTypeTime">Time</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Footer -->
+            <footer>
+                <p class="copy">Copyright - Moiz Khan &copy; 2024</p>
+            </footer>
+
+        </div>
+
+        <!-- Script -->
+        <script src="/script.js" async defer></script>
+    </body>
+</html>
